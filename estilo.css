@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+
+}
+
+.login-container {
+    width: 620px; 
+    margin-left: 190px; 
+    padding: 20px;
+    margin-bottom: -2%;
+   
+   
+}
+.pink-box {
+    width: 522px;
+    padding: 20px;
+    margin-left: 278px;
+    height: 100%;
+    background-color: rgb(188, 21, 124);
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+   }
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 48px;
+
+}
+
+
+input[type="email"] {
+    width: 120%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 48px;
+
+
+}
+
+#exampleInputEmail1 {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 48px;
+    cursor: pointer;
+    transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Cambia el color del borde cuando el input está en foco */
+#exampleInputEmail1:focus {
+    background-color: rgba(173, 216, 230, 0.5); /* Celeste suave *//* Cambia al color que prefieras, en este caso un azul */
+    outline: none;
+    border-color:rgba(173, 216, 230, 0.5);
+     /* Quita el borde de enfoque predeterminado */
+}
+
+#exampleInputPassword1 {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 48px;
+    transition: border-color 0.3s ease;
+    cursor: pointer; /* Transición suave para el cambio de color */
+}
+
+/* Cambia el color del borde cuando el input está en foco */
+#exampleInputPassword1:focus {
+    background-color: rgba(173, 216, 230, 0.5); /* Celeste suave *//* Cambia al color que prefieras, en este caso un azul */
+    outline: none;
+    border-color:rgba(173, 216, 230, 0.5);
+     /* Quita el borde de enfoque predeterminado */
+}
+
+
+
+::placeholder {
+    color: #00bcd4; /* Celeste o el color que desees */
+    opacity: 1; /* Esto hace que el color sea totalmente visible, sin opacidad */
+}
+#exampleInputEmail1::placeholder, #exampleInputPassword1::placeholder {
+    color: #00bcd4; /* Celeste */
+}
+
+button {
+   
+    cursor: pointer;
+  
+}
+
+.imagen {
+    position: absolute;
+    top: 0px;
+    left: 38px;
+}
+
+.login-container h2 {
+    text-align: left;  /* Asegura que el título esté alineado a la izquierda */
+    margin-bottom: 20px; 
+    font-size: 32px;
+    color: rgb(17, 32, 107);
+    font-weight: 495;/* Separar un poco el título del formulario */
+}
+.cre{
+    float: right;
+    text-align: right;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-size: 17px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 480;
+}
+/* Contenedor de los botones */
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Botón Crear Usuario */
+.btncrear {
+    background-color: white;
+    color: rgb(188, 21, 124);
+    border: 2px solid rgb(188, 21, 124);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+/* Botón Ingresar */
+.btnIngresar {
+    background-color: rgb(188, 21, 124);    
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    color: red;
+}
+#togglePassword i {
+    color: #00bcd4; /* Celeste */
+    font-size: 13px;
+
+}
+#exampleInputPassword1 {
+    padding-right: 35px; /* Ajusta el espacio para el ícono */
+}
+/* #exampleInputEmail1 {
+  
+    width: 600px;
+    padding: 13px; 
+} */
+/* Alinear el botón del ojo dentro del campo de la contraseña */
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+ #togglePassword {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 42%;
+    right: 10px; /* Ajusta según tu preferencia*/
+    transform: translateY(-50%);
+    color: #6c757d; /* Color del icono */
+    z-index: 2;  
+ }
+
+.help-center {
+    position: fixed;
+    bottom: 20px; /* Ajuste la distancia desde la parte inferior */
+    left: 20px;   /* Ajuste la distancia desde la parte izquierda (cambiar de 'right' a 'left') */
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff; /* Color blanco para el texto */
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer; /* Hace que el puntero cambie al pasar sobre el área */
+}
+
+.help-center i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+
+
+
