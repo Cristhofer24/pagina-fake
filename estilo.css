@@ -34,6 +34,7 @@ body {
     background-color: rgb(188, 21, 124);
     color: white;
     margin-top: 0px;/*Agregamos margen superior para espacios*/
+    z-index: 1; /* Añade un z-index menor que el de .imagen */
 }
 
 h2 {
@@ -65,19 +66,6 @@ input [type="email"] {
     box-sizing: border-box; /* Asegura que el padding no altere el ancho */
 
 }
-
-
-/* input[type="email"] {
-    width: 120%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 48px;
-
-
-} */
 
 #exampleInputEmail1 {
     width: 100%;
@@ -143,6 +131,7 @@ button {
     left: 10px;
     width: 200px;
     height: auto;
+    z-index: 10; /* Asegura que el logo esté siempre al frente */
 }
 
 .login-container h2 {
@@ -298,9 +287,9 @@ p{
         min-height: 80px; /* Define una altura mínima para hacerlo más ancho */
         margin: 0;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        height: 20%; 
-       /*height: 10vh; /* Asegura que ocupe toda la altura en móviles */
-        }
+       height: 20%; 
+       z-index: 0;/**verificar/
+       }
 
     .login-container {
         margin-top: 100px; /* Aumenta el espacio según el nuevo tamaño de pink-box */
@@ -308,6 +297,13 @@ p{
     
     .imagen {
         width: 150px;
+        
+    }
+    /*Cambiar el color del logo del  banco a blanco al aplicar el responsive*/
+    @media (max-width: 768px) {
+        .imagen img {
+            filter: brightness(0) invert(1); /* Cambia los colores a blanco */
+        }
     }
 
     h2 {
@@ -369,5 +365,6 @@ p{
         padding: 5px;
     }
 }
+
 
 }
