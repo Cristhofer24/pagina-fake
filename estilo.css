@@ -9,7 +9,8 @@
 
 body {
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: center; /* Asegura que el contenido se centre horizontalmente */
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
@@ -18,8 +19,9 @@ body {
 
 .login-container {
     width: 620px; 
-    margin-left: 190px; 
     padding: 20px;
+    /* margin-left: 190px;  */
+    margin-left: auto; /* Asegura que el contenedor se centre horizontalmente */
     margin-bottom: -2%;
    
    
@@ -27,10 +29,11 @@ body {
 .pink-box {
     width: 522px;
     padding: 20px;
-    margin-left: 278px;
+    /* margin-left: 278px; */
     height: 100%;
     background-color: rgb(188, 21, 124);
     color: white;
+    margin-top: 0px;/*Agregamos margen superior para espacios*/
 }
 
 h2 {
@@ -49,19 +52,22 @@ label {
 
 
 input[type="text"],
-input[type="password"] {
+input[type="password"]
+input [type="email"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px; /* Aumentar el padding si el campo parece demasiado pequeño */
     margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     height: 48px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no altere el ancho */
 
 }
 
 
-input[type="email"] {
+/* input[type="email"] {
     width: 120%;
     padding: 8px;
     margin-top: 5px;
@@ -71,7 +77,7 @@ input[type="email"] {
     height: 48px;
 
 
-}
+} */
 
 #exampleInputEmail1 {
     width: 100%;
@@ -131,8 +137,12 @@ button {
 
 .imagen {
     position: absolute;
-    top: 0px;
-    left: 38px;
+    /* top: 0px;
+    left: 38px; */
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: auto;
 }
 
 .login-container h2 {
@@ -247,5 +257,117 @@ p{
 }
 
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .login-container, .pink-box {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+    }
+    .imagen {
+        width: 150px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .btncrear, .btnIngresar {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    #togglePassword {
+        right: 8px;
+    }
+}
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .login-container {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+        margin-top: 120px; /* Añadimos margen superior para evitar que el formulario quede cubierto por pink-box */
+    }
+    
+    .pink-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 0px; /* Aumenta el padding para darle más altura */
+        min-height: 80px; /* Define una altura mínima para hacerlo más ancho */
+        margin: 0;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        height: 20%; 
+       /*height: 10vh; /* Asegura que ocupe toda la altura en móviles */
+        }
 
+    .login-container {
+        margin-top: 100px; /* Aumenta el espacio según el nuevo tamaño de pink-box */
+    }
+    
+    .imagen {
+        width: 150px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .btncrear, .btnIngresar {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #togglePassword {
+        right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 5px;
+        margin-top: 140px; /* Más espacio para evitar que el pink-box lo cubra */
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btncrear, .btnIngresar {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .help-center {
+        bottom: 10px;
+        left: 10px;
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    @media (max-width: 768px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        padding: 8px; /* Reducir padding para dispositivos más pequeños */
+        height: auto; /* Permite que el campo de entrada se ajuste automáticamente */
+    }
+}
+
+/* Para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        padding: 6px; /* Padding más pequeño */
+        font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+
+    .login-container {
+        padding: 5px;
+    }
+}
+
+}
