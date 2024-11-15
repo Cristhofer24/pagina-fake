@@ -123,6 +123,8 @@ button {
   
 }
 
+
+
 .imagen {
     position: absolute;
     /* top: 0px;
@@ -139,7 +141,7 @@ button {
     margin-bottom: 20px; 
     font-size: 32px;
     color: rgb(17, 32, 107);
-    font-weight: 495;/* Separar un poco el título del formulario */
+    font-weight: 495;  /* Separar un poco el título del formulario */
 }
 .cre{
     float: right;
